@@ -1,0 +1,193 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --color-bleuGradient: rgba(103, 188, 223, .8);
+  --color-lightGreen: rgba(188, 219, 183, .5);
+  --color-green: rgba(119, 180, 109, .5);
+  --green-border: rgba(171, 221, 164, .5);
+  --color-bleu: rgba(80, 205, 227, 1);
+  --bleu-border: rgba(147, 223, 236, 1);
+}
+
+.container {
+  width: 1250px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+body {
+  background: linear-gradient(to right, 
+  var(--color-lightGreen), 
+  var(--color-bleuGradient)), 
+  url('https://image.ibb.co/mdDPU7/clouds_cornfield_countryside_158827.jpg') center no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;  
+}
+.team {
+  padding: 30px 0 40px;
+  margin-top: 60px;
+  background: #fff;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 25px 1px rgba(0, 0, 0, .3);
+}
+
+.team .photo {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.blue .photo::before {
+  content: '';
+  width: 100%;
+  height: 0px;
+  border-radius: 50%;
+  background: var(--color-bleu);
+  position: absolute;
+  bottom: 130%;
+  right: 0;
+  left: 0;
+  transform: scale(3);
+  transition: all .3s linear 0s;
+}
+
+.team:hover .photo::before {
+  height: 100%;
+
+}
+
+.team .photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.blue:hover .photo img{
+  box-shadow: 0 0 0 14px var(--bleu-border);
+  transform: scale(0.6);
+}
+
+.profile-txt {
+  margin-bottom: 30px;
+}
+
+.profile-txt .title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  margin-bottom: 6px;
+}
+
+.profile-txt .position {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+}
+
+.blue .social-icons {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: var(--color-bleu);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all .6s ease;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+.social-icons li a {
+  display: block;
+  padding: 8px;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.blue .social-icons li a:hover {
+  color: var(--color-bleu);
+  background: white;
+}
+
+.team:hover .social-icons {
+  bottom: 0;
+}
+
+
+/* Green team */
+
+.green .photo::before {
+  content: '';
+  width: 100%;
+  height: 0px;
+  border-radius: 50%;
+  background: var(--color-green);
+  position: absolute;
+  bottom: 130%;
+  right: 0;
+  left: 0;
+  transform: scale(3);
+  transition: all .3s linear 0s;
+}
+
+.green:hover .photo img{
+  box-shadow: 0 0 0 14px var(--green-border);
+  transform: scale(0.6);
+}
+
+.green .social-icons li a:hover {
+  color: var(--color-green);
+  background: white;
+}
+
+.green .social-icons {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: var(--color-green);
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all .6s ease;
+}
+
+
+.green .social-icons li a:hover {
+  color: var(--color-green);
+  background: white;
+}
+
+.team:hover .social-icons {
+  bottom: 0;
+}
