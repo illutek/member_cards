@@ -1,0 +1,29 @@
+{
+  "name": "menber_cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-clean-css": "~2.0.12",
+    "gulp-imagemin": "~3.0.3",
+    "gulp-plumber": "~1.1.0",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-rename": "~1.2.2",
+    "gulp-sass": "~2.3.2",
+    "gulp-sourcemaps": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illutek/member_cards.git"
+  },
+  "author": "Stefan Vandenborne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/illutek/member_cards/issues"
+  },
+  "homepage": "https://github.com/illutek/member_cards#readme"
+}
