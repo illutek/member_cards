@@ -56,9 +56,17 @@
       transition: all 0.9s ease 0s;
     }
   }
+
+  &:hover {
+    .team__photo {
+      &::before {
+        height: 100%;
+      }
+    }
+  }
 }
 
-.blue {
+.team--blue {
   .team__photo {
     &::before {
       background: var(--color-bleu);
@@ -66,7 +74,7 @@
   }
 }
 
-.green {
+.team--green {
   .team__photo {
     &::before {
       background: var(--color-green);
@@ -74,16 +82,12 @@
   }
 }
 
-.team:hover .team__photo::before {
-  height: 100%;
-}
-
-.blue:hover .team__photo img{
+.team--blue:hover .team__photo .team__image {
   box-shadow: 0 0 0 14px var(--bleu-border);
   transform: scale(0.6);
 }
 
-.green:hover .team__photo img{
+.team--green:hover .team__photo .team__image {
   box-shadow: 0 0 0 14px var(--green-border);
   transform: scale(0.6);
 }
@@ -117,18 +121,17 @@
   list-style: none;
   padding: 0;
   margin: 0;
-
   position: absolute;
   bottom: -100px;
   left: 0;
   transition: all .6s ease;
 }
 
-.social-icons li {
+.social-icons .social__items {
   display: inline-block;
 }
 
-.social-icons li a {
+.social-icons .social__items .social__link {
   display: block;
   padding: 8px;
   font-size: 1rem;
@@ -137,32 +140,20 @@
   transition: all 0.5s ease;
 }
 
-.blue .social-icons {
+.team--blue .social-icons {
   background: var(--color-bleu);
 }
 
-.green .social-icons { 
+.team--green .social-icons { 
   background: var(--color-green);
 }
 
-.blue .social-icons li a:hover {
+.team--blue .social-icons .social__items .social__link:hover {
   color: var(--color-bleu);
   background: white;
 }
 
-.team:hover .social-icons {
-  bottom: 0;
-}
-
-
-
-.green .social-icons li a:hover {
-  color: var(--color-green);
-  background: white;
-}
-
-
-.green .social-icons li a:hover {
+.team--green .social-icons .social__items .social__link:hover {
   color: var(--color-green);
   background: white;
 }
